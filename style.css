@@ -119,6 +119,12 @@ select {
   gap: var(--gap, 1rem)
 }
 
+/* add margin-top except for the first child */
+/* we use  * + * instead of :first-child because it is not add any specificity */
+.flow>*+* {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
