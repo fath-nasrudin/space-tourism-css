@@ -351,3 +351,28 @@ select {
 .dot-indicators>[aria-selected="true"] {
   background-color: hsl(var(--clr-white) / 1);
 }
+
+/* ========== number-indicators component ========== */
+.number-indicators>* {
+  max-width: fit-content;
+  cursor: pointer;
+  color: hsl(var(--clr-white) / .50);
+  padding: 0 1rem;
+  aspect-ratio: 1;
+
+  background-color: transparent;
+  border: .2rem solid hsl(var(--clr-white) / .25);
+  border-radius: 50%;
+}
+
+.number-indicators>*:hover,
+.number-indicators>*:focus {
+  border-color: hsl(var(--clr-white) / .5);
+  color: hsl(var(--clr-white) / .75);
+}
+
+.number-indicators>[aria-selected="true"],
+.number-indicators>.active {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+}
