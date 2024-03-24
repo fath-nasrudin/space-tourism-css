@@ -326,3 +326,8 @@ select {
   color: hsl(var(--clr-white));
   border-color: hsl(var(--clr-white));
 }
+
+/* ========== tab-list component ========== */
+.tab-list {
+  --gap: 2rem;
+}
