@@ -168,10 +168,6 @@ select {
 }
 
 .grid-container>* {
-  outline: 2px solid orange;
-}
-
-.grid-container>* {
   max-width: 50ch;
 }
 
