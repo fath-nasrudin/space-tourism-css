@@ -143,6 +143,10 @@ select {
   gap: var(--gap, 1rem)
 }
 
+.d-block {
+  display: block;
+}
+
 /* add margin-top except for the first child */
 /* we use  * + * instead of :first-child because it is not add any specificity */
 .flow>*+* {
