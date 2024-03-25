@@ -160,7 +160,6 @@ select {
 }
 
 .grid-container {
-  outline: 3px solid red;
   display: grid;
   column-gap: var(--container-gap, 2rem);
 
