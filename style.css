@@ -145,7 +145,7 @@ select {
 
 
 /* 45 * 16 = 720 */
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
   .grid-container {
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
   }
