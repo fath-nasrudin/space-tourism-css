@@ -131,6 +131,30 @@ select {
   max-width: 80rem;
 }
 
+.grid-container {
+  outline: 3px solid red;
+  display: grid;
+  column-gap: var(--container-gap, 2rem);
+
+}
+
+
+
+/* 45 * 16 = 720 */
+@media (min-width: 45rem) {
+  .grid-container {
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  }
+
+  .grid-container>*:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container>*:last-child {
+    grid-column: 3;
+  }
+}
+
 /* screen reader only */
 .sr-only {
   position: absolute;
