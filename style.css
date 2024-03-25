@@ -291,7 +291,7 @@ select {
   text-decoration: none;
   border-radius: 50%;
 
-  display: grid;
+  display: inline-grid;
   place-items: center;
 }
 
