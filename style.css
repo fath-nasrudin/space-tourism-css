@@ -319,6 +319,20 @@ select {
 /* Components           */
 /* -------------------- */
 
+/* ========== skip-to-content component ========== */
+.skip-to-content {
+  position: absolute;
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  padding: 0.5rem 1rem;
+  transform: translateY(-100%);
+  transition: transform 250ms ease;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 /* ========== button component ========== */
 .large-button {
   position: relative;
