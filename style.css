@@ -496,6 +496,10 @@ select {
   --gap: 2rem;
 }
 
+.tab-list>* {
+  background: transparent;
+}
+
 /* ========== dot-indicators component ========== */
 .dot-indicators>* {
   cursor: pointer;
