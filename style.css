@@ -479,6 +479,7 @@ select {
   .primary-navigation a {
     padding-block: 2rem;
   }
+}
 
 @media (min-width:45em) {
   .primary-header::after {
