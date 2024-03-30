@@ -475,7 +475,6 @@ select {
   .primary-navigation {
     padding-inline: clamp(3rem, 10vw, 6rem);
   }
-}
 
   .primary-navigation a {
     padding-block: 2rem;
