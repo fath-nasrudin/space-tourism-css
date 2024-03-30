@@ -677,3 +677,57 @@ body {
     --gap: min(4rem, 5vw);
   }
 }
+
+/* ========== crew page layout ========== */
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+
+  align-content: start;
+}
+
+.grid-container--crew>.dot-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--crew>.crew-info {
+  grid-area: content;
+}
+
+.grid-container--crew>img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white) / .25);
+}
+
+@media (min-width: 35em) {
+  .grid-container--crew {
+    padding-bottom: 0;
+    --flow-space: 2rem;
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+  }
+}
+
+@media (min-width: 45em) {
+  .grid-container--crew {
+    /* see grid-template settings for general .grid-container @media min-width 45em */
+    grid-template-areas:
+      ". title image ."
+      ". content image ."
+      ". tabs image .";
+
+    justify-items: start;
+  }
+
+  .grid-container--crew>img {
+    max-width: 100%;
+  }
+}
