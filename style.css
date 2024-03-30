@@ -595,7 +595,7 @@ body {
 }
 
 .numbered-title {
-  grid-area: "title";
+  grid-area: title;
 }
 
 .grid-container--destination>img {
