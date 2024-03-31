@@ -54,7 +54,8 @@
 
       <h1 class="numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
 
-      <article class="crew-info flow">
+      <!-- The Commander -->
+      <article id="commander-tab" class="crew-info flow" role="tabpanel">
         <header class="flow flow--space-sm">
           <h2 class="text-accent ff-serif fs-500 uppercase">Commander</h2>
           <p class="uppercase ff-serif fs-700">Douglas Hurley</p>
@@ -66,16 +67,83 @@
         </p>
       </article>
 
-      <div class="dot-indicators flex">
-        <button aria-selected="true"><span class="sr-only">The Commander</span></button>
-        <button aria-selected="false"><span class="sr-only">The Pilot</span></button>
-        <button aria-selected="false"><span class="sr-only">The Crew Specialist</span></button>
-        <button aria-selected="false"><span class="sr-only">The Crew engineer</span></button>
-      </div>
+      <!-- The Specialist -->
+      <article hidden id="specialist-tab" class="crew-info flow" role="tabpanel">
+        <header class="flow flow--space-sm">
+          <h2 class="text-accent ff-serif fs-500 uppercase">Mission Specialist</h2>
+          <p class="uppercase ff-serif fs-700">Mark Shuttleworth</p>
+        </header>
+        <p>
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu
+          operating
+          system. Shuttleworth became the first South African to travel to space as a space tourist.
+        </p>
+      </article>
 
-      <picture class="image">
+      <!-- The Pilot -->
+      <article hidden id="pilot-tab" class="crew-info flow" role="tabpanel">
+        <header class="flow flow--space-sm">
+          <h2 class="text-accent ff-serif fs-500 uppercase">Pilot</h2>
+          <p class="uppercase ff-serif fs-700">Victor Glover</p>
+        </header>
+        <p>
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is
+          a
+          commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+          station
+          systems flight engineer.
+        </p>
+      </article>
+
+      <!-- The Engineer -->
+      <article hidden id="engineer-tab" class="crew-info flow" role="tabpanel">
+        <header class="flow flow--space-sm">
+          <h2 class="text-accent ff-serif fs-500 uppercase">Flight Engineer</h2>
+          <p class="uppercase ff-serif fs-700">Anousheh Ansari</p>
+        </header>
+        <p>
+          Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth
+          self-funded
+          space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.
+        </p>
+      </article>
+
+
+
+      <div class="dot-indicators flex" role="tablist">
+
+        <button aria-selected="true" role="tab" aria-controls="commander-tab" data-tab-image="image-commander">
+          <span class="sr-only">The Commander</span>
+        </button>
+
+        <button aria-selected="false" role="tab" aria-controls="pilot-tab" data-tab-image="image-pilot">
+          <span class="sr-only">The Pilot</span>
+        </button>
+
+        <button aria-selected="false" role="tab" aria-controls="specialist-tab" data-tab-image="image-specialist">
+          <span class="sr-only">The Crew Specialist</span>
+        </button>
+
+        <button aria-selected="false" role="tab" aria-controls="engineer-tab" data-tab-image="image-engineer">
+          <span class="sr-only">The Crew engineer</span>
+        </button>
+
+      </div>
+      <picture id="image-commander" class="image js-tab-image">
         <source srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
         <img src="./assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+      </picture>
+      <picture hidden id="image-pilot" class="image js-tab-image">
+        <source srcset="./assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+        <img src="./assets/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth">
+      </picture>
+      <picture hidden id="image-specialist" class="image js-tab-image">
+        <source srcset="./assets/crew/image-victor-glover.webp" type="image/webp">
+        <img src="./assets/crew/image-victor-glover.png" alt="Victor Glover">
+      </picture>
+      <picture hidden id="image-engineer" class="image js-tab-image">
+        <source srcset="./assets/crew/image-anousheh-ansari.webp" type="image/webp">
+        <img src="./assets/crew/image-anousheh-ansari.png" alt="Anousheh Ansari">
       </picture>
     </main>
   </body>
