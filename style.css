@@ -706,6 +706,7 @@ body {
   .grid-container--destination {
     justify-items: start;
     align-content: start;
+    align-items: start;
     grid-template-areas:
       ". title title ."
       ". image tabs ."
