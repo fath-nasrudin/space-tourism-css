@@ -53,35 +53,44 @@
     <main id="main" class="grid-container grid-container--destination flow">
       <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
 
-      <picture class="image">
+      <picture id="moon-tab-image" class="image js-tab-image">
         <source srcset="./assets/destination/image-moon.webp" type="image/webp">
         <img src="./assets/destination/image-moon.png" alt="the moon">
       </picture>
 
-      <picture hidden class="image">
+      <picture id="mars-tab-image" hidden class="image  js-tab-image">
         <source srcset="./assets/destination/image-mars.webp" type="image/webp">
         <img src="./assets/destination/image-mars.png" alt="the planet mars">
       </picture>
 
-      <picture hidden class="image">
+      <picture id="europa-tab-image" hidden class="image  js-tab-image">
         <source srcset="./assets/destination/image-europa.webp" type="image/webp">
         <img src="./assets/destination/image-europa.png" alt="the europa">
       </picture>
 
-      <picture hidden class="image">
+      <picture id="titan-tab-image" hidden class="image  js-tab-image">
         <source srcset="./assets/destination/image-titan.webp" type="image/webp">
         <img src="./assets/destination/image-titan.png" alt="the titan">
       </picture>
 
-      <div class="tab-list underline-indicators flex">
-        <button aria-selected="true" class="uppercase text-accent ff-sans-cond letter-spacing-2">Moon</button>
-        <button aria-selected="false" class="uppercase text-accent ff-sans-cond letter-spacing-2">Mars</button>
-        <button aria-selected="false" class="uppercase text-accent ff-sans-cond letter-spacing-2">Europa</button>
-        <button aria-selected="false" class="uppercase text-accent ff-sans-cond letter-spacing-2">Titan</button>
+      <div role="tablist" aria-label="destination list" class="tab-list underline-indicators flex">
+
+        <button aria-selected="true" role="tab" tabindex="0" aria-controls="moon-tab" data-tab-image="moon-tab-image"
+          class="uppercase text-accent ff-sans-cond letter-spacing-2">Moon</button>
+
+        <button aria-selected="false" role="tab" tabindex="-1" aria-controls="mars-tab" data-tab-image="mars-tab-image"
+          class="uppercase text-accent ff-sans-cond letter-spacing-2">Mars</button>
+
+        <button aria-selected="false" role="tab" tabindex="-1" aria-controls="europa-tab"
+          data-tab-image="europa-tab-image" class="uppercase text-accent ff-sans-cond letter-spacing-2">Europa</button>
+
+        <button aria-selected="false" role="tab" tabindex="-1" aria-controls="titan-tab"
+          data-tab-image="titan-tab-image" class="uppercase text-accent ff-sans-cond letter-spacing-2">Titan</button>
+
       </div>
 
       <!-- The moon -->
-      <article class="destination-info">
+      <article id="moon-tab" tabindex="0" role="tabpanel" class="destination-info">
         <h2 class="fs-800 ff-serif uppercase">Moon</h2>
 
         <p>
@@ -104,7 +113,7 @@
       </article>
 
       <!-- The mars -->
-      <article hidden class="destination-info">
+      <article hidden id="mars-tab" tabindex="0" role="tabpanel" class="destination-info">
         <h2 class="fs-800 ff-serif uppercase">Mars</h2>
 
         <p>
@@ -127,7 +136,7 @@
       </article>
 
       <!-- The europa -->
-      <article hidden class="destination-info">
+      <article hidden id="europa-tab" tabindex="0" role="tabpanel" class="destination-info">
         <h2 class="fs-800 ff-serif uppercase">Europa</h2>
 
         <p>
@@ -150,7 +159,7 @@
       </article>
 
       <!-- The titan -->
-      <article hidden class="destination-info">
+      <article hidden id="titan-tab" tabindex="0" role="tabpanel" class="destination-info">
         <h2 class="fs-800 ff-serif uppercase">Titan</h2>
 
         <p>
