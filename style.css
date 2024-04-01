@@ -529,6 +529,10 @@ select {
 }
 
 /* ========== number-indicators component ========== */
+.number-indicators {
+  flex-direction: var(--direction, row);
+}
+
 .number-indicators>* {
   max-width: fit-content;
   cursor: pointer;
